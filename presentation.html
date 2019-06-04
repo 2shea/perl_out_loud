@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Title</title>
+    <meta charset="utf-8">
+    <style>
+      @import url(https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz);
+      @import url(https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic);
+      @import url(https://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700,400italic);
+
+      body { font-family: 'Droid Serif'; font-size:100%;}
+      h1, h2, h3 {
+        font-family: 'Yanone Kaffeesatz';
+        font-weight: normal;
+      }
+      .remark-code, .remark-inline-code { font-family: 'Ubuntu Mono'; }
+      .remark-slide-content { font-size:20; }
+    </style>
+  </head>
+  <body>
+    <textarea id="source">
+
+class: center, middle
+
+# Perl Out Loud
+
+---
+class: center, middle
+# But... Why??
+
+---
+class: middle
+# RSI (Repetitive Strain Injury)
+
+???
+a condition in which the prolonged performance of repetitive actions, typically with the hands, causes pain or impairment of function in the tendons and muscles involved.
+
+Since 2017
+Lost typing ability
+Both hands
+---
+
+# First I tried...
+* Taking breaks
+* Wrist braces at night
+* Anti-inflammatories (lots!)
+* Occupational/Physical Therapy
+* Acupuncture
+* Chiropractor
+* Pain creams
+* Stretching
+
+---
+class: center, middle
+background-image: url(ergonomic-evolvement.jpg)
+
+# Ergonomics
+
+???
+Tape pens to my hands
+Tape fingers together
+Standing desk
+Split keyboard
+
+---
+background-image: url(keyboards.png)
+
+---
+background-image: url(sad-face.jpg)
+
+???
+* New keyboards only got me so far
+* Got frustrated feeling limited
+
+While taking four aleve a day, using a very specialized keyboard, adding a left-hand mouse, maintaining a stretching schedule, i could type ~3 hours a day with no more than ~30-45 straight minutes of typing, but broken up with long breaks in between.
+
+* Started looking at voice dictation
+
+---
+
+# I was expecting writing perl by voice to go something like this...
+
+---
+class: center, middle
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/MzJ0CytAsec" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+---
+
+# But it actually works like...
+
+---
+class: center, middle
+<video width="100%" controls>
+  <source src="videos/better_than_the_90s.mp4" type="video/mp4">
+</video>
+
+---
+
+# The Tech
+
+* Dragon Dictation 6 for Mac
+* Talon
+* Decent Microphone
+
+---
+
+# What Is Talon?
+* Hands-free input (voice/noise command, eye tracking)
+* Uses Dragon Dictation API
+* Also has a built-in voice engine
+* Configurable with Python
+* Free!
+* Ryan Hileman (the author)
+* New in 2018
+
+???
+This talk is not about Talon... it's an example of how Talon can be used. All the commands and tools you will see are built on top of Talon's API.
+
+---
+
+# The ABC's
+
+ **A**ir **B**at **C**ap **D**ip **E**ach **F**ine **G**one **H**arp **S**it **J**ury **C**runch **L**ook **M**ad **N**ear **O**dd **P**it **Q**uench **R**ed **S**un **T**rap **U**rge **V**est **W**hale **P**lex **Y**ank **Z**ip
+
+<input type="textarea" name="test" autofocus></input>
+
+???
+Each letter of the alphabet is a word. The alphabet words are carefully chosen to have few syllables (for speed), and carefully chosen phonemes* (for accuracy).
+
+---
+
+class: center, middle
+![nato alphabet](images/nato_alphabet.jpg)
+
+---
+
+class: center, middle
+<img src="images/alphabet_sounds.png" height="600" alt="alphabet sounds">
+
+---
+
+# But what about all those symbols in perl?
+### Actually, symbols are easy. 
+
+---
+
+### Knowing the alphabet, basic keys, and keyboard shortcuts will get you far
+
+* "command cap" -> cmd + C -> Copy
+* "command pit" -> cmd + P -> Paste
+* "command space" -> cmd + Space -> Open Spotlight
+* "command shift trap" -> cmd + shift + T -> Restore recently closed browser 
+tab
+
+#### For long or hard to remember combinations, I can configure commands in Talon
+
+---
+
+# Homophones
+### Same pronunciation, but different meaning, origin, or spelling
+<img src="images/llamaphones_rose.png" height="400" alt="alphabet sounds">
+
+---
+
+# I Built this homophones webview!
+.center[![homophones perl](images/homophones_perl.png)]
+
+---
+
+# Repeater
+```python
+from talon.voice import Context, Rep, talon
+
+ctx = Context("repeater")
+
+ordinals = {}
+
+def ordinal(n):
+    """
+    Convert an integer into its ordinal representation::
+        ordinal(0)   => '0th'
+        ordinal(3)   => '3rd'
+        ordinal(122) => '122nd'
+        ordinal(213) => '213th'
+    """
+    n = int(n)
+    suffix = ["th", "st", "nd", "rd", "th"][min(n % 10, 4)]
+    if 11 <= (n % 100) <= 13:
+        suffix = "th"
+    return str(n) + suffix
+
+for n in range(2, 100):
+    ordinals[ordinal(n)] = n - 1
+
+def repeat(m):
+    o = m["repeater.ordinals"][0]
+    repeater = Rep(int(ordinals[o]))
+    repeater.ctx = talon
+    return repeater(None)
+
+ctx.set_list("ordinals", ordinals.keys())
+
+ctx.keymap({"{repeater.ordinals}": repeat})
+```
+
+???
+10 min
+
+---
+# Formatters
+
+---
+# Command-Line
+* GitHub
+* 
+
+---
+class: center, middle
+<video height="60%" controls>
+  <source src="videos/speaking_perl_demo.mp4" type="video/mp4">
+</video>
+
+---
+
+# Challenges
+* ramp up with limited typing ability is HARD
+* need to think ahead more before executing
+* some things still require a mouse
+* voice strain
+* open office
+
+---
+# Stenomask
+<img src="images/steno3.jpg" height="250" alt="thanks">
+<img src="images/steno1.jpg" height="250" alt="thanks">
+---
+
+# Voice Dictation Friendly Engineering
+* Use abbreviations/acronyms thoughtfully
+  * backspace not bkspc
+* async communication
+* zoom
+* Build apps with accessibility consideration, lots of great talks about this!
+
+---
+Summary
+* Take care of your body!
+* Voice Dictation is surprisingly decent
+* Remember non-keyboard users when building things
+
+---
+# Thanks!
+
+Links
+* Talon: https://talonvoice.com/
+* personal Talon scripts: https://github.com/2shea/talon_configs
+* Talon community scripts: https://github.com/dwiel/talon_community
+
+   </textarea>
+    <script src="remark.min.js">
+    </script>
+    <script>
+      var slideshow = remark.create();
+    </script>
+  </body>
+</html>
