@@ -15,6 +15,13 @@
       }
       .remark-code, .remark-inline-code { font-family: 'Ubuntu Mono'; }
       .remark-slide-content { font-size:20; }
+      input, input:focus, input:hover {
+        font-size:50px;
+        cursor:none;
+        border:none;
+        outline:none;
+      }
+
     </style>
   </head>
   <body>
@@ -23,6 +30,9 @@
 class: center, middle
 
 # Perl Out Loud
+
+???
+- introduction
 
 ---
 class: center, middle
@@ -33,38 +43,40 @@ class: middle
 # RSI (Repetitive Strain Injury)
 
 ???
-a condition in which the prolonged performance of repetitive actions, typically with the hands, causes pain or impairment of function in the tendons and muscles involved.
+pain felt in muscles, nerves, and tendons caused by repetitive movement and overuse.
 
-Since 2017
-Lost typing ability
+Started 2017
+significantly impaired typing ability
 Both hands
 ---
 
 # First I tried...
 * Taking breaks
 * Wrist braces at night
-* Anti-inflammatories (lots!)
+* Anti-inflammatories
 * Occupational/Physical Therapy
 * Acupuncture
 * Chiropractor
 * Pain creams
-* Stretching
+* Yoga/Stretching
 
 ---
 class: center, middle
-background-image: url(ergonomic-evolvement.jpg)
-
 # Ergonomics
 
 ???
+Ergonomic review
 Tape pens to my hands
 Tape fingers together
 Standing desk
-Split keyboard
 
 ---
 background-image: url(keyboards.png)
 
+
+???
+Split keyboard
+mitosis keyboard
 ---
 background-image: url(sad-face.jpg)
 
@@ -98,23 +110,28 @@ class: center, middle
 
 # The Tech
 
-* Dragon Dictation 6 for Mac
+* Dragon Dictation
 * Talon
-* Decent Microphone
+* Microphone
 
+???
+- for mac
+- need decent microphone
 ---
 
 # What Is Talon?
 * Hands-free input (voice/noise command, eye tracking)
 * Uses Dragon Dictation API
-* Also has a built-in voice engine
-* Configurable with Python
+* Programmatically configured with Python
 * Free!
 * Ryan Hileman (the author)
 * New in 2018
 
 ???
-This talk is not about Talon... it's an example of how Talon can be used. All the commands and tools you will see are built on top of Talon's API.
+This talk is not about Talon... it's an example of how Talon can be used. All 
+the commands and tools you will see are built on top of Talon's API.
+* Mention what dragon is
+* Also has a built-in voice engine
 
 ---
 
@@ -122,13 +139,12 @@ This talk is not about Talon... it's an example of how Talon can be used. All th
 
  **A**ir **B**at **C**ap **D**ip **E**ach **F**ine **G**one **H**arp **S**it **J**ury **C**runch **L**ook **M**ad **N**ear **O**dd **P**it **Q**uench **R**ed **S**un **T**rap **U**rge **V**est **W**hale **P**lex **Y**ank **Z**ip
 
-<input type="textarea" name="test" autofocus></input>
+<input type="textarea" name="test"></input>
 
 ???
 Each letter of the alphabet is a word. The alphabet words are carefully chosen to have few syllables (for speed), and carefully chosen phonemes* (for accuracy).
 
 ---
-
 class: center, middle
 ![nato alphabet](images/nato_alphabet.jpg)
 
@@ -142,77 +158,63 @@ class: center, middle
 # But what about all those symbols in perl?
 ### Actually, symbols are easy. 
 
+<input type="textarea" name="test"></input>
+
+???
+- may be valid perl?
+
 ---
 
-### Knowing the alphabet, basic keys, and keyboard shortcuts will get you far
+# Alphabet, basic keys, and keyboard shortcuts will get you far.
 
+<input type="textarea" name="test"></input>
+
+???
+* ship option crunch -> 
+* option each 
+* option pit -> π
 * "command cap" -> cmd + C -> Copy
 * "command pit" -> cmd + P -> Paste
-* "command space" -> cmd + Space -> Open Spotlight
-* "command shift trap" -> cmd + shift + T -> Restore recently closed browser 
 tab
+- command, option, shift or ship
 
-#### For long or hard to remember combinations, I can configure commands in Talon
+
+For long or hard to remember combinations, I can configure commands in Talon
 
 ---
 
 # Homophones
-### Same pronunciation, but different meaning, origin, or spelling
 <img src="images/llamaphones_rose.png" height="400" alt="alphabet sounds">
-
----
-
-# I Built this homophones webview!
-.center[![homophones perl](images/homophones_perl.png)]
-
----
-
-# Repeater
-```python
-from talon.voice import Context, Rep, talon
-
-ctx = Context("repeater")
-
-ordinals = {}
-
-def ordinal(n):
-    """
-    Convert an integer into its ordinal representation::
-        ordinal(0)   => '0th'
-        ordinal(3)   => '3rd'
-        ordinal(122) => '122nd'
-        ordinal(213) => '213th'
-    """
-    n = int(n)
-    suffix = ["th", "st", "nd", "rd", "th"][min(n % 10, 4)]
-    if 11 <= (n % 100) <= 13:
-        suffix = "th"
-    return str(n) + suffix
-
-for n in range(2, 100):
-    ordinals[ordinal(n)] = n - 1
-
-def repeat(m):
-    o = m["repeater.ordinals"][0]
-    repeater = Rep(int(ordinals[o]))
-    repeater.ctx = talon
-    return repeater(None)
-
-ctx.set_list("ordinals", ordinals.keys())
-
-ctx.keymap({"{repeater.ordinals}": repeat})
-```
+<input style="text-align:center;" type="textarea" name="test"></input>
 
 ???
-10 min
+### Same pronunciation, but different meaning, origin, or spelling
+* credit book for image
+
+Demo some homophones
+command shift left (select word behind cursor)
 
 ---
-# Formatters
+
+# Repetition
+<input style="text-align:center;" type="textarea" name="test"></input>
+
+???
+- ordinals
+- demo simple repetition
 
 ---
-# Command-Line
-* GitHub
-* 
+# Formatting
+<input style="text-align:center;" type="textarea" name="test"></input>
+???
+- kebab, snake, allcaps, pack
+
+---
+# Custom Vocabulary
+<input style="text-align:center;" type="textarea" name="test"></input>
+
+???
+- upsert
 
 ---
 class: center, middle
@@ -221,26 +223,54 @@ class: center, middle
 </video>
 
 ---
+# Browser
+<img src="images/vimium.png" height="600" alt="vimium" title="vimium">
+
+---
+
+???
+- demo committing to git, push to github
+---
 
 # Challenges
 * ramp up with limited typing ability is HARD
 * need to think ahead more before executing
-* some things still require a mouse
+* poor accessibility; some things still require a mouse
 * voice strain
 * open office
+
+???
+ramp up:
+* async communication
+* zoom instead of lots of slack noise
 
 ---
 # Stenomask
 <img src="images/steno3.jpg" height="250" alt="thanks">
 <img src="images/steno1.jpg" height="250" alt="thanks">
+
+---
+# Acoustic Pods
+picture
+
+???
+Another solution for open office
+---
+# Not so big Challenges
+* supporting specific programming languages
+
+???
+- language optimizations are nice to have, quality of life improvements but not necessarily required
 ---
 
-# Voice Dictation Friendly Engineering
+# Voice Dictation Friendly Code
 * Use abbreviations/acronyms thoughtfully
+* Don't try to save vowels
   * backspace not bkspc
-* async communication
-* zoom
-* Build apps with accessibility consideration, lots of great talks about this!
+* shorter files are better
+
+???
+- use full words (don't make it about english only)
 
 ---
 Summary
