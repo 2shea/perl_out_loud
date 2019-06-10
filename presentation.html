@@ -1,20 +1,109 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Title</title>
+    <title>Perl Out Loud</title>
     <meta charset="utf-8">
     <style>
       @import url(https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz);
       @import url(https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic);
       @import url(https://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700,400italic);
 
-      body { font-family: 'Droid Serif'; font-size:100%;}
-      h1, h2, h3 {
+      body { 
+        font-size:50px;
         font-family: 'Yanone Kaffeesatz';
         font-weight: normal;
+        margin: 0;
+        padding: 0;
       }
-      .remark-code, .remark-inline-code { font-family: 'Ubuntu Mono'; }
-      .remark-slide-content { font-size:20; }
+
+      .remark-code, .remark-inline-code {
+        font-family: 'Ubuntu Mono';
+        background-color: #fee;
+        color: black;
+      }
+
+      .remark-slide-content {
+        padding: 0 2em 0 2em;
+      }
+
+      .remark-slide-number {
+        font-size: 20px;
+      }
+
+      li {
+        list-style-type: square;
+      }
+
+      h1 {
+        font-size: 220px;
+        padding-bottom: 0;
+        margin-bottom: 0;        
+      }
+
+      h2 { 
+        font-size: 75px; 
+      }
+
+      h3 {
+        font-size: 75px;
+        color: black;
+      }
+
+      h4 {
+        z-index: 10;
+        font-size: 65px;
+      }
+
+      .title {
+        font-size: 123px;
+        font-weight: bolder;
+        padding: 0;
+      }
+
+      .pain, .discovery, .learning, .mastery, .culture {
+        color: #ed1843;
+      }
+
+      .painvert {
+        background-color: #ed1843;
+        color: #fee;
+        font-size: 210px;
+        font-weight: bold;
+        padding: 0;
+      }
+
+      .black {
+        background-color: black;
+      }
+
+      .ads {
+        font-color: black;
+      }
+
+      .acc {
+        color: black;
+        text-transform: uppercase;
+      }
+
+      .commercial {
+        position: absolute;
+        z-index: 1;
+        top: 25px;
+        right: 25px;
+        float: right;
+      }
+
+/*      .pain h1 {
+        padding: 1%;
+        background-color: rgba(237, 24, 67, 0.1);
+      }
+*/      
+      /*.discovery { color: #f3831a; }*/
+      /*.learning { color: #1224b2; }*/=
+      /*.mastery {color: #530ba5;}*/
+      /*.culture {color: rgb(69, 193, 15);}*/
+      /*.culture {color: rgb(168, 9, 234);}*/
+
       input, input:focus, input:hover {
         font-size:50px;
         cursor:none;
@@ -23,8 +112,10 @@
       }
 
       table {
-        width: 80%;
-        margin:auto;
+        width: 720px;
+        margin: auto;
+        /*padding: 0;*/
+        font-size: 40px;
       }
 
       caption {
@@ -32,12 +123,21 @@
         font-size: 200%;
       }
 
-      td:nth-child(1) {
-        font-weight: bold;
+      td {
+        font-weight: lighter;
       }
 
-      td:nth-child(3) {
-        font-weight: bold;
+      td::first-letter {
+        /*font-weight: bold;*/
+        color: black;
+        /*text-decoration: underline;*/
+      }
+
+      .attribution {
+        font-size: 20px;
+        color: black;
+        position: absolute;
+        bottom: 25px;
       }
 
     </style>
@@ -45,20 +145,42 @@
   <body>
     <textarea id="source">
 
-class: center, middle
+class: center, middle, pain, title
 
-# Perl Out Loud
+Perl Out Loud 🗣
+
+---
+class: pain
+## whois emily
+- GitHub: @2shea
+- Twitter: @yomilly
+- I write code for Fastly
+
+---
+class: ads
+<img src="images/fastly_logo.png" height="200" alt="fasly logo">
+
+We help developers make fast, secure and reliable digital experiences happen by processing and serving customers' applications at the edge, as close to end-users as possible.
 
 ???
-- introduction
+- We have built an edge cloud platform designed to be programmable and support agile software development.
+- We have 60 points-of-presence around the world, as of March 31, 2019.
 
 ---
-class: center, middle
-# But... Why??
+class: pain, center, middle
+I write Perl… by voice
 
 ---
-class: middle
-# RSI (Repetitive Strain Injury)
+class: center, middle, painvert
+But... Why??
+
+---
+class: center, middle, pain
+# RSI
+
+(Repetitive Strain Injury)
+
+👎👎👎
 
 ???
 pain felt in muscles, nerves, and tendons caused by repetitive movement and overuse.
@@ -67,20 +189,27 @@ Started 2017
 significantly impaired typing ability
 Both hands
 ---
+class: pain
 
-# First I tried...
+## First I tried…
 * Taking breaks
 * Wrist braces at night
 * Anti-inflammatories
 * Occupational/Physical Therapy
+
+---
+class: pain
+## Then I tried…
 * Acupuncture
 * Chiropractor
 * Pain creams
 * Yoga/Stretching
+* •••
 
 ---
-class: center, middle
-# Ergonomics
+class: center, middle, pain, title
+Ergonomics
+
 
 ???
 Ergonomic review
@@ -89,6 +218,7 @@ Tape fingers together
 Standing desk
 
 ---
+class: pain
 background-image: url(keyboards.png)
 
 
@@ -96,7 +226,8 @@ background-image: url(keyboards.png)
 Split keyboard
 mitosis keyboard
 ---
-background-image: url(sad-face.jpg)
+class: pain, center, middle
+<img height="100%" width="100%" src="sad-face.jpg" alt="sad dog" title="" />
 
 ???
 * New keyboards only got me so far
@@ -107,55 +238,112 @@ While taking four aleve a day, using a very specialized keyboard, adding a left-
 * Started looking at voice dictation
 
 ---
+class: middle, discovery
 
-# I was expecting writing perl by voice to go something like this...
-
----
-class: center, middle
-<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/MzJ0CytAsec" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+I was expecting writing perl by voice to go something like this...
 
 ---
-
-# But it actually works like...
+class: center, middle, black
+<iframe style="padding:0;margin:0" width="98%" height="98%" src="https://www.youtube-nocookie.com/embed/MzJ0CytAsec" frameborder="0" allowfullscreen></iframe>
 
 ---
-class: center, middle
+class: center, middle, discovery
+
+But it actually works like...
+
+---
+class: center, middle, black
 <video width="100%" controls>
   <source src="videos/better_than_the_90s.mp4" type="video/mp4">
 </video>
 
 ---
+class: discovery
 
-# The Tech
+## The Tech
 
-* Dragon Dictation
-* Talon
-* Microphone
+Microphone 🎤
+
+Talon <img src="images/talon_logo.png" height="50px" alt="alphabet sounds">
+
+Dragon Dictation <img src="images/dragon_logo.gif" height="50px" alt="alphabet sounds">
 
 ???
 - for mac
 - need decent microphone
 ---
+class: discovery
 
-# What Is Talon?
-* Hands-free input (voice/noise command, eye tracking)
+## What Is Talon?
+* Hands-free input
 * Uses Dragon Dictation API
 * Programmatically configured with Python
 * Free!
-* Ryan Hileman (the author)
-* New in 2018
+* https://www.patreon.com/lunixbochs
 
 ???
+
+* (voice/noise commands, eye tracking) 
+
 This talk is not about Talon... it's an example of how Talon can be used. All 
 the commands and tools you will see are built on top of Talon's API.
 * Mention what dragon is
 * Also has a built-in voice engine
 
 ---
+class: center, middle, painvert
 
-# The ABC's
+The ABC's
 
- **A**ir **B**at **C**ap **D**ip **E**ach **F**ine **G**one **H**arp **S**it **J**ury **C**runch **L**ook **M**ad **N**ear **O**dd **P**it **Q**uench **R**ed **S**un **T**rap **U**rge **V**est **W**hale **P**lex **Y**ank **Z**ip
+---
+
+class: center, middle, discovery
+<img src="images/alphabet_sounds.png" height="600" alt="alphabet sounds">
+---
+class: middle, discovery
+### NATO Phonetic Alphabet
+<div>
+  <table>
+  <!-- <caption>NATO Phonetic Alphabet</caption> -->
+    <tr><td> Alpha </td><td> Hotel </td><td> November </td><td> Uniform </td></tr>
+    <tr><td> Bravo </td><td> India </td><td> Oscar </td><td> Victor </td></tr>
+    <tr><td> Charlie </td><td> Juliett </td><td> Papa </td><td> Whiskey </td></tr>
+    <tr><td> Delta </td><td> Kilo </td><td> Québec </td><td> X-ray </td></tr>
+    <tr><td> Echo </td><td> Lima </td><td> Romeo </td><td> Yankee </td></tr>
+    <tr><td> Foxtrot </td><td> Mike </td><td> Sierra </td><td> Zulu </td></tr>
+    <tr><td> Golf </td><td></td><td> Tango </td></tr>
+</table>
+</div>
+
+---
+class: discovery
+
+<span class="acc">A</span>ir
+<span class="acc">B</span>at
+<span class="acc">C</span>ap
+<span class="acc">D</span>ip
+<span class="acc">E</span>ach
+<span class="acc">F</span>ine
+<span class="acc">G</span>one
+<span class="acc">H</span>arp
+S<span class="acc">I</span>t
+<span class="acc">J</span>ury
+<span class="acc">K</span>runch
+<span class="acc">L</span>ook
+<span class="acc">M</span>ad
+<span class="acc">N</span>ear
+<span class="acc">O</span>dd
+<span class="acc">P</span>it
+<span class="acc">Q</span>uench
+<span class="acc">R</span>ed
+<span class="acc">S</span>un
+<span class="acc">T</span>rap
+<span class="acc">U</span>rge
+<span class="acc">V</span>est
+<span class="acc">W</span>hale
+ple<span class="acc">X</span>
+<span class="acc">Y</span>ank
+<span class="acc">Z</span>ip
 
 <input type="textarea" name="test"></input>
 
@@ -163,34 +351,11 @@ the commands and tools you will see are built on top of Talon's API.
 Each letter of the alphabet is a word. The alphabet words are carefully chosen to have few syllables (for speed), and carefully chosen phonemes* (for accuracy).
 
 ---
-class: middle
-<div>
-  <table>
-  <caption>NATO Phonetic Alphabet</caption>
-    <tr><td> A </td><td> Alpha </td><td> N </td><td> November </td></tr>
-    <tr><td> B </td><td> Bravo </td><td> O </td><td> Oscar </td></tr>
-    <tr><td> C </td><td> Charlie </td><td> P </td><td> Papa </td></tr>
-    <tr><td> D </td><td> Delta </td><td> Q </td><td> Québec </td></tr>
-    <tr><td> E </td><td> Echo </td><td> R </td><td> Romeo </td></tr>
-    <tr><td> F </td><td> Foxtrot </td><td> S </td><td> Sierra </td></tr>
-    <tr><td> G </td><td> Golf </td><td> T </td><td> Tango </td></tr>
-    <tr><td> H </td><td> Hotel </td><td> U </td><td> Uniform </td></tr>
-    <tr><td> I </td><td> India </td><td> V </td><td> Victor </td></tr>
-    <tr><td> J </td><td> Juliett </td><td> W </td><td> Whiskey </td></tr>
-    <tr><td> K </td><td> Kilo </td><td> X </td><td> X -ray</td></tr>
-    <tr><td> L </td><td> Lima </td><td> Y </td><td> Yankee </td></tr>
-    <tr><td> M </td><td> Mike </td><td> Z </td><td> Zulu </td></tr>
-</table>
-</div>
----
+class: mastery
 
-class: center, middle
-<img src="images/alphabet_sounds.png" height="600" alt="alphabet sounds">
+## But what about all those symbols in perl?
 
----
-
-# But what about all those symbols in perl?
-### Actually, symbols are easy. 
+Actually, symbols are easy.
 
 <input type="textarea" name="test"></input>
 
@@ -198,8 +363,9 @@ class: center, middle
 - may be valid perl?
 
 ---
+class: mastery
 
-# Alphabet, basic keys, and keyboard shortcuts will get you far.
+## Alphabet, basic keys, and keyboard shortcuts will get you far.
 
 <input type="textarea" name="test"></input>
 
@@ -216,23 +382,25 @@ tab
 For long or hard to remember combinations, I can configure commands in Talon
 
 ---
+class: mastery
 
-# Homophones
+## Homophones
 <input style="text-align:center;" type="textarea" name="test"></input>
 
 ???
-### Same pronunciation, but different meaning, origin, or spelling
+## Same pronunciation, but different meaning, origin, or spelling
 * credit book for image
 
 Demo some homophones
 command shift left (select word behind cursor)
 
 ---
-class: center, middle
-<img src="images/llamaphones.jpg" height="600" alt="llamaphones">
+class: center, middle, mastery, black
+<img src="images/llamaphones.jpg" height="570" alt="llamaphones">
 ---
+class: mastery
 
-# Repetition
+## Repetition
 <input style="text-align:center;" type="textarea" name="test"></input>
 
 ???
@@ -240,90 +408,143 @@ class: center, middle
 - demo simple repetition
 
 ---
-# Formatting
+class: mastery
+## Formatting
 <input style="text-align:center;" type="textarea" name="test"></input>
 ???
 - kebab, snake, allcaps, pack
 
 ---
-# Custom Vocabulary
+class: mastery
+## Custom Vocabulary
 <input style="text-align:center;" type="textarea" name="test"></input>
 
 ???
 - upsert
 
 ---
-class: center, middle
+class: center, middle, black
 <video width="100%" controls>
   <source src="videos/mojolicious_demo.mp4" type="video/mp4">
 </video>
 
 ---
-# Browser
-<img src="images/vimium.png" height="600" alt="vimium" title="vimium">
+class: mastery
+## Browser
+<img src="images/vimium.png" alt="vimium" title="vimium">
 
 ---
+class: mastery, black
 
 Demo Placeholder
 
 ???
 - demo committing to git, push to github
 ---
+class: painvert, center, middle, title
 
-# Challenges
-* ramp up with limited typing ability is HARD
-* need to think ahead more before executing
-* poor accessibility; some things still require a mouse
-* voice strain
-* open office
+Challenges
+
+---
+class: pain, middle
+## Learning Curve
+
+it is steep 📈
+
+<!-- substantial 🤔📚 -->
 
 ???
-ramp up:
-* async communication
-* zoom instead of lots of slack noise
+* exacerbated with injury
+* different flow than typing
+* shifts in team communication may help
+  * async when possible
+  * zoom
 
 ---
-# Stenomask
-<img src="images/stenoman.jpg" height="250" alt="man wearing stenomask">
-<img src="images/stenomask-lady.png" height="250" alt="lady wearing stenomask">
-https://talktech.com/stenomask-steno-sr/
----
-# Acoustic Pods
-<img src="images/focus_room.jpg" width="90%" alt="acoustic pod">
-https://www.archiproducts.com/en/products/furniko/acoustic-multimedia-office-booth-focus-room_357574
+class: pain
+## Tools With Poor Accessibility
+
+going between frustrated 😣 to very angry 😠
 
 ???
-Another solution for open office
+* most roadblocks are because of this
+* lots of time working around
+* lots of good talks on the topic
 ---
-# Not so big Challenges
-* supporting specific programming languages
+class: pain
+## Voice Strain
+
+guess what happens after talking to your computer for 8 hours a day?…
+
+---
+class: pain
+## Open Office
+
+everyone's favorite complaint
+
+<div style="padding-top:40%;font-size:25px;">(other than free lunch)</div>
+
+???
+* two way noise problem
+---
+class: pain
+## Stenomask
+<img src="images/stenoman.jpg" width="49%" alt="man wearing stenomask">
+<img src="images/stenomask-lady.png" width="49%" alt="lady wearing stenomask">
+<div class="attribution">Source: <a href="https://talktech.com/stenomask-steno-sr/">https://talktech.com/stenomask-steno-sr/</a></div>
+---
+class: pain
+
+<img class="commercial" src="images/focus_room.png" height="500px" alt="acoustic pod">
+## Acoustic <br/>Pods
+
+
+<div class="attribution">Source: <a href="https://www.archiproducts.com/en/products/furniko/acoustic-multimedia-offic0-booth-focus-room_357574">https://www.archiproducts.com/en/products/furniko/acoustic-multimedia-office-booth-focus-room_357574</a></div>
+???
+---
+class: pain
+## Not So Big Challenges
+
+Supporting specific programming languages
 
 ???
 - language optimizations are nice to have, quality of life improvements but not necessarily required
 ---
+class: pain
 
-# Voice Dictation Friendly Code
+## Voice Dictation Friendly Code
 * Use abbreviations/acronyms thoughtfully
 * Don't try to save vowels
-  * backspace not bkspc
+  * `backspace` not `bkspc`
 * shorter files are better
 
 ???
-- use full words (don't make it about english only)
-
+- use full words when you can (don't make it about english only)
+- also benefits screen readers
 ---
-Summary
+class: pain
+## Summary
 * Take care of your body!
-* Voice Dictation is surprisingly decent
-* Remember non-keyboard users when building things
+* People are using speech to code in real life
+* Remember non-keyboard users when building things :)
+* The future may be more diverse than the keyboard/mouse model
+
+???
+- ask for ergo evaluations
 
 ---
-# Thanks!
-
-Links
+class: painvert, center, middle
+Thanks!
+---
+class: pain
+## Fastly is Hiring!
+---
+class: pain
+## Links
 * Talon: https://talonvoice.com/
-* personal Talon scripts: https://github.com/2shea/talon_configs
-* Talon community scripts: https://github.com/dwiel/talon_community
+* My Talon: https://github.com/2shea/talon_configs
+* Talon Community: https://github.com/dwiel/talon_community
+* Talon Patreon: https://www.patreon.com/lunixbochs
 
    </textarea>
     <script src="remark.min.js">
