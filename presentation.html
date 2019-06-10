@@ -4,12 +4,18 @@
     <title>Perl Out Loud</title>
     <meta charset="utf-8">
     <style>
-      @import url(https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz);
-      @import url(https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic);
-      @import url(https://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700,400italic);
+      @font-face {
+        font-family: 'Yanone Kaffeesatz';
+        src: url(fonts/YanoneKaffeesatz-Regular.otf);
+      }
+
+      @font-face {
+        font-family: 'Fura Code';
+        src: url(fonts/FuraCodeRegular.otf);
+      }
 
       body { 
-        font-size:50px;
+        font-size: 50px;
         font-family: 'Yanone Kaffeesatz';
         font-weight: normal;
         margin: 0;
@@ -17,7 +23,8 @@
       }
 
       .remark-code, .remark-inline-code {
-        font-family: 'Ubuntu Mono';
+        font-family: 'Fura Code';
+        font-size: 40px;
         background-color: #fee;
         color: black;
       }
@@ -37,11 +44,11 @@
       h1 {
         font-size: 220px;
         padding-bottom: 0;
-        margin-bottom: 0;        
+        margin-bottom: 0;
       }
 
-      h2 { 
-        font-size: 75px; 
+      h2 {
+        font-size: 75px;
       }
 
       h3 {
@@ -93,28 +100,15 @@
         float: right;
       }
 
-/*      .pain h1 {
-        padding: 1%;
-        background-color: rgba(237, 24, 67, 0.1);
-      }
-*/      
       /*.discovery { color: #f3831a; }*/
       /*.learning { color: #1224b2; }*/=
       /*.mastery {color: #530ba5;}*/
       /*.culture {color: rgb(69, 193, 15);}*/
       /*.culture {color: rgb(168, 9, 234);}*/
 
-      input, input:focus, input:hover {
-        font-size:50px;
-        cursor:none;
-        border:none;
-        outline:none;
-      }
-
       table {
         width: 720px;
         margin: auto;
-        /*padding: 0;*/
         font-size: 40px;
       }
 
@@ -128,9 +122,7 @@
       }
 
       td::first-letter {
-        /*font-weight: bold;*/
         color: black;
-        /*text-decoration: underline;*/
       }
 
       .attribution {
@@ -138,6 +130,31 @@
         color: black;
         position: absolute;
         bottom: 25px;
+      }
+
+      input[type=textarea] {
+        font-family: 'Fura Code';
+        font-size: 50px;
+        border: none;
+        cursor: none;
+        outline: none;
+        padding: 25px;
+        width: 100%;
+        height: 150px;
+        box-sizing: border-box;
+        resize: none;
+        transition: background-color 1.0s ease-in-out;
+      }
+
+      input[type=textarea]:focus {
+        width: 100%;
+        background-color: #ed1843;
+        color: white;
+      }
+
+      input[type=textarea]::selection {
+        background-color: white;
+        color: #ed1842;
       }
 
     </style>
@@ -219,7 +236,7 @@ Standing desk
 
 ---
 class: pain
-background-image: url(keyboards.png)
+background-image: url(images/keyboards.png)
 
 
 ???
@@ -227,7 +244,7 @@ Split keyboard
 mitosis keyboard
 ---
 class: pain, center, middle
-<img height="100%" width="100%" src="sad-face.jpg" alt="sad dog" title="" />
+<img height="100%" width="100%" src="images/sad-face.jpg" alt="sad dog" title="" />
 
 ???
 * New keyboards only got me so far
@@ -326,7 +343,7 @@ class: discovery
 <span class="acc">F</span>ine
 <span class="acc">G</span>one
 <span class="acc">H</span>arp
-S<span class="acc">I</span>t
+s<span class="acc">I</span>t
 <span class="acc">J</span>ury
 <span class="acc">K</span>runch
 <span class="acc">L</span>ook
@@ -346,7 +363,6 @@ ple<span class="acc">X</span>
 <span class="acc">Z</span>ip
 
 <input type="textarea" name="test"></input>
-
 ???
 Each letter of the alphabet is a word. The alphabet words are carefully chosen to have few syllables (for speed), and carefully chosen phonemes* (for accuracy).
 
@@ -385,7 +401,7 @@ For long or hard to remember combinations, I can configure commands in Talon
 class: mastery
 
 ## Homophones
-<input style="text-align:center;" type="textarea" name="test"></input>
+<input type="textarea" name="test"></input>
 
 ???
 ## Same pronunciation, but different meaning, origin, or spelling
@@ -401,7 +417,7 @@ class: center, middle, mastery, black
 class: mastery
 
 ## Repetition
-<input style="text-align:center;" type="textarea" name="test"></input>
+<input type="textarea" name="test"></input>
 
 ???
 - ordinals
@@ -410,14 +426,14 @@ class: mastery
 ---
 class: mastery
 ## Formatting
-<input style="text-align:center;" type="textarea" name="test"></input>
+<input type="textarea" name="test"></input>
 ???
 - kebab, snake, allcaps, pack
 
 ---
 class: mastery
 ## Custom Vocabulary
-<input style="text-align:center;" type="textarea" name="test"></input>
+<input type="textarea" name="test"></input>
 
 ???
 - upsert
