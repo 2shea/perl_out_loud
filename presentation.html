@@ -1,173 +1,19 @@
 <!DOCTYPE html>
 <html>
-  <head>
+
+<head>
     <title>Perl Out Loud</title>
     <meta charset="utf-8">
-    <style>
-      @font-face {
-        font-family: 'Yanone Kaffeesatz';
-        src: url(fonts/YanoneKaffeesatz-Regular.otf);
-      }
+    <link href="slides.css" rel="stylesheet" type="text/css">
+</head>
 
-      @font-face {
-        font-family: 'Fura Code';
-        src: url(fonts/FuraCodeRegular.otf);
-      }
+<body>
+    <script src="remark.min.js">
+    </script>
+    <script>
+        var slideshow = remark.create({
+            source: `
 
-      body { 
-        font-size: 50px;
-        font-family: 'Yanone Kaffeesatz';
-        font-weight: normal;
-        margin: 0;
-        padding: 0;
-      }
-
-      .remark-code, .remark-inline-code {
-        font-family: 'Fura Code';
-        font-size: 40px;
-        background-color: #fee;
-        color: black;
-      }
-
-      .remark-slide-content {
-        padding: 0 2em 0 2em;
-      }
-
-      .remark-slide-number {
-        font-size: 20px;
-      }
-
-      li {
-        list-style-type: square;
-      }
-
-      h1 {
-        font-size: 220px;
-        padding-bottom: 0;
-        margin-bottom: 0;
-      }
-
-      h2 {
-        font-size: 75px;
-      }
-
-      h3 {
-        font-size: 75px;
-        color: black;
-      }
-
-      h4 {
-        z-index: 10;
-        font-size: 65px;
-      }
-
-      .title {
-        font-size: 123px;
-        font-weight: bolder;
-        padding: 0;
-      }
-
-      .pain, .discovery, .learning, .mastery, .culture {
-        color: #ed1843;
-      }
-
-      .painvert {
-        background-color: #ed1843;
-        color: #fee;
-        font-size: 210px;
-        font-weight: bold;
-        padding: 0;
-      }
-
-      .black {
-        background-color: black;
-      }
-
-      .ads {
-        font-color: black;
-      }
-
-      .acc {
-        color: black;
-        text-transform: uppercase;
-      }
-
-      .commercial {
-        position: absolute;
-        z-index: 1;
-        top: 25px;
-        right: 25px;
-        float: right;
-      }
-
-      .selfie {
-        position: absolute;
-        top: 70px;
-        right: 70px;
-        float: right;
-      }
-
-      /*.discovery { color: #f3831a; }*/
-      /*.learning { color: #1224b2; }*/=
-      /*.mastery {color: #530ba5;}*/
-      /*.culture {color: rgb(69, 193, 15);}*/
-      /*.culture {color: rgb(168, 9, 234);}*/
-
-      table {
-        width: 720px;
-        margin: auto;
-        font-size: 40px;
-      }
-
-      caption {
-        font-weight: bold;
-        font-size: 200%;
-      }
-
-      td {
-        font-weight: lighter;
-      }
-
-      td::first-letter {
-        color: black;
-      }
-
-      .attribution {
-        font-size: 20px;
-        color: black;
-        position: absolute;
-        bottom: 25px;
-      }
-
-      input[type=textarea] {
-        font-family: monospace;
-        font-size: 50px;
-        border: none;
-        cursor: none;
-        outline: none;
-        padding: 25px;
-        width: 100%;
-        height: 150px;
-        box-sizing: border-box;
-        resize: none;
-        transition: background-color 1.0s ease-in-out;
-      }
-
-      input[type=textarea]:focus {
-        width: 100%;
-        background-color: #ed1843;
-        color: white;
-      }
-
-      input[type=textarea]::selection {
-        background-color: white;
-        color: #ed1842;
-      }
-
-    </style>
-  </head>
-  <body>
-    <textarea id="source">
 
 class: center, middle, pain, title
 
@@ -277,7 +123,8 @@ class: center, middle, black
 <video width="100%" controls>
   <source src="videos/vista_perl_cut.mp4" type="video/mp4">
 </video>
-<div class="attribution">Source: <a href="https://youtu.be/MzJ0CytAsec">https://youtu.be/MzJ0CytAsec</a></div>
+
+.attribution[Source: https://youtu.be/MzJ0CytAsec]
 
 ---
 class: center, middle, discovery
@@ -335,50 +182,47 @@ class: center, middle, discovery
 ---
 class: middle, discovery
 ### NATO Phonetic Alphabet
-<div>
-  <table>
-  <!-- <caption>NATO Phonetic Alphabet</caption> -->
-    <tr><td> Alpha </td><td> Hotel </td><td> November </td><td> Uniform </td></tr>
-    <tr><td> Bravo </td><td> India </td><td> Oscar </td><td> Victor </td></tr>
-    <tr><td> Charlie </td><td> Juliett </td><td> Papa </td><td> Whiskey </td></tr>
-    <tr><td> Delta </td><td> Kilo </td><td> Québec </td><td> X-ray </td></tr>
-    <tr><td> Echo </td><td> Lima </td><td> Romeo </td><td> Yankee </td></tr>
-    <tr><td> Foxtrot </td><td> Mike </td><td> Sierra </td><td> Zulu </td></tr>
-    <tr><td> Golf </td><td></td><td> Tango </td></tr>
+<table>
+  <tr><td> Alpha </td><td> Hotel </td><td> November </td><td> Uniform </td></tr>
+  <tr><td> Bravo </td><td> India </td><td> Oscar </td><td> Victor </td></tr>
+  <tr><td> Charlie </td><td> Juliett </td><td> Papa </td><td> Whiskey </td></tr>
+  <tr><td> Delta </td><td> Kilo </td><td> Québec </td><td> X-ray </td></tr>
+  <tr><td> Echo </td><td> Lima </td><td> Romeo </td><td> Yankee </td></tr>
+  <tr><td> Foxtrot </td><td> Mike </td><td> Sierra </td><td> Zulu </td></tr>
+  <tr><td> Golf </td><td></td><td> Tango </td></tr>
 </table>
-</div>
 
 ---
 class: discovery
 
-<span class="acc">A</span>ir
-<span class="acc">B</span>at
-<span class="acc">C</span>ap
-<span class="acc">D</span>ip
-<span class="acc">E</span>ach
-<span class="acc">F</span>ine
-<span class="acc">G</span>one
-<span class="acc">H</span>arp
-s<span class="acc">I</span>t
-<span class="acc">J</span>ury
-<span class="acc">K</span>runch
-<span class="acc">L</span>ook
-<span class="acc">M</span>ad
-<span class="acc">N</span>ear
-<span class="acc">O</span>dd
-<span class="acc">P</span>it
-<span class="acc">Q</span>uench
-<span class="acc">R</span>ed
-<span class="acc">S</span>un
-<span class="acc">T</span>rap
-<span class="acc">U</span>rge
-<span class="acc">V</span>est
-<span class="acc">W</span>hale
-ple<span class="acc">X</span>
-<span class="acc">Y</span>ank
-<span class="acc">Z</span>ip
+.acc[A]ir
+.acc[B]at
+.acc[C]ap
+.acc[D]ip
+.acc[E]ach
+.acc[F]ine
+.acc[G]one
+.acc[H]arp
+s.acc[I]t
+.acc[J]ury
+.acc[K]runch
+.acc[L]ook
+.acc[M]ad
+.acc[N]ear
+.acc[O]dd
+.acc[P]it
+.acc[Q]uench
+.acc[R]ed
+.acc[S]un
+.acc[T]rap
+.acc[U]rge
+.acc[V]est
+.acc[W]hale
+ple.acc[x]
+.acc[Y]ank
+.acc[Z]ip
 
-<input type="textarea" name="test"></input>
+<textarea rows="4"></textarea>
 ???
 Each letter of the alphabet is a word. The alphabet words are carefully chosen to have few syllables (for speed), and carefully chosen phonemes* (for accuracy).
 
@@ -387,11 +231,11 @@ class: mastery
 
 ## But what about all those symbols in perl?
 
-Actually, symbols are easy.
-
-<input type="textarea" name="test"></input>
+<textarea rows="4"></textarea>
 
 ???
+Actually, symbols are easy.
+
 $/='&'|'@';
 '+'^'_';$/='&'|'@';$,='[
 
@@ -406,7 +250,7 @@ class: mastery
 
 ## Alphabet, basic keys, and keyboard shortcuts will get you far.
 
-<input type="textarea" name="test"></input>
+<textarea rows="4"></textarea>
 
 ???
 * ship option crunch -> 
@@ -424,7 +268,7 @@ For long or hard to remember combinations, I can configure commands in Talon
 class: mastery
 
 ## Homophones
-<input type="textarea" name="test"></input>
+<textarea rows="4"></textarea>
 
 ???
 ## Same pronunciation, but different meaning, origin, or spelling
@@ -443,7 +287,7 @@ class: center, middle, mastery, black
 class: mastery
 
 ## Repetition
-<input type="textarea" name="test"></input>
+<textarea rows="4"></textarea>
 
 ???
 - ordinals
@@ -452,7 +296,7 @@ class: mastery
 ---
 class: mastery
 ## Formatting
-<input type="textarea" name="test"></input>
+<textarea rows="4"></textarea>
 ???
 HTTP::Response
 XML::Simple
@@ -476,7 +320,7 @@ Accept-Encoding
 ---
 class: mastery
 ## Custom Vocabulary
-<input type="textarea" name="test"></input>
+<textarea rows="4"></textarea>
 
 ???
 upsert
@@ -551,15 +395,15 @@ class: pain
 ## Stenomask
 <img src="images/stenoman.jpg" width="49%" alt="man wearing stenomask">
 <img src="images/stenomask-lady.png" width="49%" alt="lady wearing stenomask">
-<div class="attribution">Source: <a href="https://talktech.com/stenomask-steno-sr/">https://talktech.com/stenomask-steno-sr/</a></div>
+
+.attribution[Source: https://talktech.com/stenomask-steno-sr/]
 ---
 class: pain
 
 <img class="commercial" src="images/focus_room.png" height="500px" alt="acoustic pod">
 ## Acoustic <br/>Pods
 
-
-<div class="attribution">Source: <a href="https://www.archiproducts.com/en/products/furniko/acoustic-multimedia-offic0-booth-focus-room_357574">https://www.archiproducts.com/en/products/furniko/acoustic-multimedia-office-booth-focus-room_357574</a></div>
+.attribution[Source: https://www.archiproducts.com/en/products/furniko/acoustic-multimedia-offic0-booth-focus-room_357574]
 ???
 ---
 class: center, middle, pain
@@ -580,7 +424,7 @@ class: pain
 ## Voice Dictation Friendly Code
 * Use abbreviations/acronyms thoughtfully
 * Don't try to save vowels
-  * `backspace` not `bkspc`
+  * \`backspace\` not \`bkspc\`
 * shorter files are better
 
 ???
@@ -615,11 +459,9 @@ class: pain
 * Talon Community: https://github.com/dwiel/talon_community
 * Talon Patreon: https://www.patreon.com/lunixbochs
 
-   </textarea>
-    <script src="remark.min.js">
+      `
+        });
     </script>
-    <script>
-      var slideshow = remark.create();
-    </script>
-  </body>
+</body>
+
 </html>

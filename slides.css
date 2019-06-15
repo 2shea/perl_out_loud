@@ -1,0 +1,192 @@
+@font-face {
+    font-family: 'Yanone Kaffeesatz';
+    src: url(fonts/YanoneKaffeesatz-Regular.otf);
+}
+
+@font-face {
+    font-family: 'Fura Code';
+    src: url(fonts/FuraCodeRegular.otf);
+}
+
+body {
+    font-size: 50px;
+    font-family: 'Yanone Kaffeesatz';
+    font-weight: normal;
+    margin: 0;
+    padding: 0;
+}
+
+.remark-code,
+.remark-inline-code {
+    font-family: 'Fura Code';
+    font-size: 40px;
+    background-color: #fee;
+    color: black;
+}
+
+.remark-slide-content {
+    padding: 0 2em 0 2em;
+}
+
+.remark-slide-number {
+    font-size: 20px;
+}
+
+li {
+    list-style-type: square;
+}
+
+h1 {
+    font-size: 220px;
+    padding-bottom: 0;
+    margin-bottom: 0;
+}
+
+
+h2 {
+    font-size: 75px;
+}
+
+h3 {
+    font-size: 75px;
+    color: black;
+}
+
+h4 {
+    z-index: 10;
+    font-size: 65px;
+}
+
+/* unvisited link */
+a:link {
+    color: #969;
+}
+
+/* visited link */
+a:visited {
+    color: #969;
+}
+
+/* mouse over link */
+a:hover {
+    color: hotpink;
+}
+
+/* selected link */
+a:active {
+    color: hotpink;
+}
+
+.title {
+    font-size: 123px;
+    font-weight: bolder;
+    padding: 0;
+}
+
+.pain,
+.discovery,
+.learning,
+.mastery,
+.culture {
+    color: #ed1843;
+}
+
+.painvert {
+    background-color: #ed1843;
+    color: #fee;
+    font-size: 210px;
+    font-weight: bold;
+    padding: 0;
+}
+
+.black {
+    background-color: black;
+}
+
+.black .attribution {
+    color: #999;
+}
+
+.ads {
+    font-color: black;
+}
+
+.acc {
+    color: black;
+    text-transform: uppercase;
+}
+
+.commercial {
+    position: absolute;
+    z-index: 1;
+    top: 25px;
+    right: 25px;
+    float: right;
+}
+
+.selfie {
+    position: absolute;
+    top: 70px;
+    right: 70px;
+    float: right;
+}
+
+/*.discovery { color: #f3831a; }*/
+/*.learning { color: #1224b2; }*/
+/*.mastery {color: #530ba5;}*/
+/*.culture {color: rgb(69, 193, 15);}*/
+/*.culture {color: rgb(168, 9, 234);}*/
+
+table {
+    width: 800px;
+    margin: auto;
+    font-size: 40px;
+}
+
+caption {
+    font-weight: bold;
+    font-size: 200%;
+}
+
+td {
+    font-weight: lighter;
+}
+
+td::first-letter {
+    color: black;
+}
+
+.attribution {
+    font-size: 20px;
+    color: black;
+    position: absolute;
+    bottom: 25px;
+}
+
+input[type=textarea],
+textarea {
+    font-family: monospace;
+    font-size: 50px;
+    border: none;
+    cursor: none;
+    outline: none;
+    padding: 25px;
+    width: 100%;
+    /*height: 150px;*/
+    box-sizing: border-box;
+    resize: none;
+    transition: background-color 1.0s ease-in-out;
+}
+
+input[type=textarea]:focus,
+textarea:focus {
+    width: 100%;
+    background-color: #ed1843;
+    color: white;
+}
+
+input[type=textarea]::selection,
+textarea::selection {
+    background-color: white;
+    color: #ed1842;
+}
