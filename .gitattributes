@@ -1,2 +1,7 @@
 videos/* filter=lfs diff=lfs merge=lfs -text
 perl_out_loud.pdf filter=lfs diff=lfs merge=lfs -text
+videos/mojolicious_demo.mp4 filter=lfs diff=lfs merge=lfs -text
+videos/vista_perl_cut.mp4 filter=lfs diff=lfs merge=lfs -text
+videos/yt_vista_perl.mp4 filter=lfs diff=lfs merge=lfs -text
+videos/git_demo.mp4 filter=lfs diff=lfs merge=lfs -text
+videos/I_can_do_better.mp4 filter=lfs diff=lfs merge=lfs -text
