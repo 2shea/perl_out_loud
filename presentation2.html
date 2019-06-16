@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Perl Out Loud</title>
+    <meta charset="utf-8">
+    <link href="slides.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+    <script src="remark.min.js">
+    </script>
+    <script>
+        var slideshow = remark.create({
+            source: `
+
+
+class: center, middle, pain, title
+
+Perl Out Loud 🗣
+
+---
+class: pain
+## whois emily
+- GitHub: @2shea
+- Twitter: @yomilly
+- I write code for Fastly
+<img class="selfie" src="images/selfie.jpg" height="400" alt="selfie"/>
+
+---
+class: ads
+<img src="images/fastly_logo.png" height="200" alt="fasly logo">
+
+We help developers make fast, secure and reliable digital experiences happen by processing and serving customers' applications at the edge, as close to end-users as possible.
+
+???
+- We have built an edge cloud platform designed to be programmable and support agile software development.
+- We have 60 points-of-presence around the world, as of March 31, 2019.
+- i work on the platform for delivering core Edge Cloud configurations, and
+
+---
+class: pain, center, middle
+I write Perl… by voice
+
+---
+class: center, middle, painvert
+But... Why??
+
+---
+class: center, middle, pain
+# RSI
+
+(Repetitive Strain Injury)
+
+👎👎👎
+
+???
+pain felt in muscles, nerves, and tendons caused by repetitive movement and overuse.
+
+Started 2017
+significantly impaired typing ability
+Both hands
+---
+class: pain
+
+## First I tried…
+* Taking breaks
+* Wrist braces at night
+* Anti-inflammatories
+* Occupational/Physical Therapy
+* Massage
+
+---
+class: pain
+## Then I tried…
+* Acupuncture
+* Chiropractor
+* Pain creams
+* Yoga/Stretching
+* And More...
+
+---
+class: center, middle, pain, title
+✨Ergonomics✨
+
+???
+Ergonomic review
+Tape pens to my hands
+Tape fingers together
+Standing desk
+
+---
+class: pain
+background-image: url(images/keyboards.png)
+
+
+???
+Split keyboard
+mitosis keyboard
+---
+class: pain, center, middle
+<img height="100%" width="100%" src="images/sad-face.jpg" alt="sad dog" title="" />
+
+???
+* New keyboards only got me so far
+* Got frustrated feeling limited
+
+While taking four aleve a day, using a very specialized keyboard, adding a left-hand mouse, maintaining a stretching schedule, i could type ~3 hours a day with no more than ~30-45 straight minutes of typing, but broken up with long breaks in between.
+
+* Started looking at voice dictation
+
+---
+class: middle, center, painvert
+Voice??
+
+---
+class: middle, discovery
+
+I was expecting writing perl by voice to go something like this...
+
+---
+class: center, middle, black
+<video width="100%" controls>
+  <source src="videos/vista_perl_cut.mp4" type="video/mp4">
+</video>
+
+.attribution[Source: https://youtu.be/MzJ0CytAsec]
+
+---
+class: center, middle, discovery
+
+But it actually works like...
+
+---
+class: center, middle, black
+<video width="100%" controls>
+  <source src="videos/I_can_do_better.mp4" type="video/mp4">
+</video>
+
+---
+class: discovery
+
+## The Tech
+
+Microphone 🎤
+
+Talon <img src="images/talon_logo.png" height="50px" alt="alphabet sounds">
+
+Dragon Dictation <img src="images/dragon_logo.gif" height="50px" alt="alphabet sounds">
+
+???
+- for mac
+- need decent microphone
+---
+class: discovery
+
+## What Is Talon?
+* Hands-free input
+* Uses Dragon Dictation API
+* Programmatically configured with Python
+* Free!
+* https://www.patreon.com/lunixbochs
+
+???
+
+* (voice/noise commands, eye tracking) 
+
+This talk is not about Talon... it's an example of how Talon can be used. All 
+the commands and tools you will see are built on top of Talon's API.
+* Mention what dragon is
+* Also has a built-in voice engine
+
+---
+class: center, middle, painvert
+
+The ABC's
+
+---
+
+class: center, middle, discovery
+<img src="images/alphabet_sounds.png" height="600" alt="alphabet sounds">
+---
+class: middle, discovery
+### NATO Phonetic Alphabet
+<table>
+  <tr><td> Alpha </td><td> Hotel </td><td> November </td><td> Uniform </td></tr>
+  <tr><td> Bravo </td><td> India </td><td> Oscar </td><td> Victor </td></tr>
+  <tr><td> Charlie </td><td> Juliett </td><td> Papa </td><td> Whiskey </td></tr>
+  <tr><td> Delta </td><td> Kilo </td><td> Québec </td><td> X-ray </td></tr>
+  <tr><td> Echo </td><td> Lima </td><td> Romeo </td><td> Yankee </td></tr>
+  <tr><td> Foxtrot </td><td> Mike </td><td> Sierra </td><td> Zulu </td></tr>
+  <tr><td> Golf </td><td></td><td> Tango </td></tr>
+</table>
+
+---
+class: discovery
+
+.acc[A]ir
+.acc[B]at
+.acc[C]ap
+.acc[D]ip
+.acc[E]ach
+.acc[F]ine
+.acc[G]one
+.acc[H]arp
+s.acc[I]t
+.acc[J]ury
+.acc[K]runch
+.acc[L]ook
+.acc[M]ad
+.acc[N]ear
+.acc[O]dd
+.acc[P]it
+.acc[Q]uench
+.acc[R]ed
+.acc[S]un
+.acc[T]rap
+.acc[U]rge
+.acc[V]est
+.acc[W]hale
+ple.acc[x]
+.acc[Y]ank
+.acc[Z]ip
+
+<img class="center,middle" src="gifs/ABCs.gif" width="100%"/>
+???
+Each letter of the alphabet is a word. The alphabet words are carefully chosen to have few syllables (for speed), and carefully chosen phonemes* (for accuracy).
+
+---
+class: mastery
+
+## But what about all those symbols in perl?
+
+<img class="center,middle" src="gifs/symbols.gif" width="100%"/>
+
+???
+Actually, symbols are easy.
+
+$/='&'|'@';
+'+'^'_';$/='&'|'@';$,='[
+
+---
+class: mastery
+## ✨YAY PERL✨<img style="float:right;" src="images/perl_camel.png" height="600" alt="perl camel"/>
+<img style="padding-left:50px;padding-top:50px;" src="images/zoom_camel.png" height="150" alt="perl camel"/>
+
+
+---
+class: mastery
+
+## basic keys + keyboard shortcuts will get you far!
+
+<img class="center,middle" src="gifs/basic_keys.gif" width="100%"/>
+
+???
+* ship option crunch -> 
+* option each 
+* option pit -> π
+* "command cap" -> cmd + C -> Copy
+* "command pit" -> cmd + P -> Paste
+tab
+- command, option, shift or ship
+
+
+For long or hard to remember combinations, I can configure commands in Talon
+
+---
+class: mastery
+
+## Homophones
+<img class="center,middle" src="gifs/homophones.gif" width="100%"/>
+
+???
+## Same pronunciation, but different meaning, origin, or spelling
+
+Demo some homophones
+Chile,chilly,chili
+bight,byte,bite
+kernel,colonel
+plaque,plack
+command shift left (select word behind cursor)
+
+---
+class: center, middle, mastery, black
+<img src="images/llamaphones.jpg" height="570" alt="llamaphones">
+---
+class: mastery
+
+## Repetition
+<img class="center,middle" src="gifs/repetition.gif" width="100%"/>
+
+???
+- ordinals
+- demo simple repetition
+
+---
+class: mastery
+## Formatting
+<img class="center,middle" src="gifs/formatting.gif" width="100%"/>
+
+???
+HTTP::Response
+XML::Simple
+DateTime
+Log::Log4perl
+Plack::Middleware::SimpleLogger
+Plack::Middleware::RearrangeHeaders
+Plack::Recursive::ForwardRequest
+File::Slurp
+__DATA__
+__INFO__
+Perl::Critic::Exception::Configuration::Generic
+Perl::Critic::Exception::Configuration::Option::Global
+Cache-Control
+If-None-Match
+If-Modified-Since
+Accept-Encoding
+
+- kebab, snake, allcaps, pack
+
+---
+class: mastery
+## Custom Vocabulary
+<img class="center,middle" src="gifs/custom_vocabulary.gif" width="100%"/>
+
+???
+upsert
+perltidy
+githook
+diag
+undef
+spotify
+---
+class: center, middle, black
+<video width="100%" controls>
+  <source src="videos/mojolicious_demo.mp4" type="video/mp4">
+</video>
+
+---
+class: mastery
+## Browser
+<img src="images/vimium.png" height="400px" alt="vimium" title="vimium">
+
+---
+class: center, middle, mastery, black
+<video width="100%" controls>
+  <source src="videos/git_demo.mp4" type="video/mp4">
+</video>
+
+???
+- demo committing to git, push to github
+---
+class: painvert, center, middle, title
+
+Challenges
+
+---
+class: pain, middle
+## Learning Curve
+
+it is steep 📈
+
+<!-- substantial 🤔📚 -->
+
+???
+* exacerbated with injury
+* different flow than typing
+* shifts in team communication may help
+  * async when possible
+  * zoom
+
+---
+class: center, middle, pain
+## Tools With Poor Accessibility
+<img src="images/sad_panda.png" alt="sad panda" height="400"/>
+???
+* most roadblocks are because of this
+* lots of time working around
+* lots of good talks on the topic
+---
+class: pain
+## Voice Strain
+
+guess what happens after talking to your computer for 8 hours a day?…
+
+---
+class: pain
+## Open Office
+
+everyone's favorite complaint
+
+???
+* two way noise problem
+---
+class: pain
+## Stenomask
+<img src="images/stenoman.jpg" width="49%" alt="man wearing stenomask">
+<img src="images/stenomask-lady.png" width="49%" alt="lady wearing stenomask">
+
+.attribution[Source: https://talktech.com/stenomask-steno-sr/]
+---
+class: pain
+
+<img class="commercial" src="images/focus_room.png" height="500px" alt="acoustic pod">
+## Acoustic <br/>Pods
+
+.attribution[Source: https://www.archiproducts.com/en/products/furniko/acoustic-multimedia-offic0-booth-focus-room_357574]
+???
+---
+class: center, middle, pain
+## Remote Work, FTW!!
+
+
+---
+class: pain
+## Not So Big Challenges
+
+Supporting specific programming languages
+
+???
+- language optimizations are nice to have, quality of life improvements but not necessarily required
+---
+class: pain
+
+## Voice Dictation Friendly Code
+* Use abbreviations/acronyms thoughtfully
+* Don't try to save vowels
+  * \`backspace\` not \`bkspc\`
+* shorter files are better
+
+???
+- use full words when you can (don't make it about english only)
+- also benefits screen readers
+---
+class: painvert, middle, center
+So... Why.
+
+---
+class: pain
+## Take Aways
+* Take care of your body!
+* People are using speech to code in real life
+* Remember non-keyboard users when building things :)
+* The future may be more diverse than the keyboard/mouse model
+
+???
+- ask for ergo evaluations
+
+---
+class: painvert, center, middle
+Thanks!
+---
+class: center, middle, pain
+## BTW, Fastly is Hiring!
+---
+class: pain
+## Links
+* Talon: https://talonvoice.com/
+* My Talon: https://github.com/2shea/talon_configs
+* Talon Community: https://github.com/dwiel/talon_community
+* Talon Patreon: https://www.patreon.com/lunixbochs
+
+      `
+        });
+    </script>
+</body>
+
+</html>
