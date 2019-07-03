@@ -1,32 +1,73 @@
 <!DOCTYPE html>
 <html>
-
-<head>
+  <head>
     <title>Voice Driven Development</title>
-    <meta charset="utf-8">
-    <link href="slides.css" rel="stylesheet" type="text/css">
-</head>
+    <meta charset="utf-8" />
+    <link href="style/slides.css" rel="stylesheet" type="text/css" />
+    <link href="style/video-js.css" rel="stylesheet" type="text/css" />
+  </head>
 
-<body>
-    <script src="remark.min.js"></script>
+  <body>
+    <script src="js/remark.min.js"></script>
+    <script src="js/video.min.js"></script>
+    <script src="js/videojs.hotkeys.min.js"></script>
     <script>
-        var slideshow = remark.create({
-            sourceUris: [
-            'slides/title.md',
-            'slides/me.md',
-            'slides/fastly.md',
-            'slides/background.md',
-            'slides/discovery.md',
-            'slides/alphabet.md',
-            'slides/demo.md',
-            'slides/long_demo.md',
-            'slides/browser.md',
-            'slides/challenges.md',
-            'slides/friendly_code.md',
-            'slides/end.md',
-            ]
-        });
-    </script>
-</body>
+      var slideshow = remark.create({
+        sourceUris: [
+          'slides/title.md',
+          'slides/me.md',
+          'slides/fastly.md',
+          'slides/background.md',
+          'slides/discovery.md',
+          'slides/alphabet.md',
+          'slides/demo.md',
+          'slides/long_demo.md',
+          'slides/browser.md',
+          'slides/challenges.md',
+          'slides/friendly_code.md',
+          'slides/end.md',
+        ],
+      });
+      slideshow.on('contentLoaded', function() {
+        document.getElementsByClassName('video-js').forEach(function(element) {
+          videojs(element.id).ready(function() {
+            // request fullscreen
+            this.on('play', function() {
+              this.requestFullscreen();
+            });
 
+            this.on('pause', function() {
+              this.exitFullscreen();
+            });
+
+            this.on('ended', function() {
+              this.exitFullscreen();
+            });
+
+            this.hotkeys({
+              alwaysCaptureHotkeys: false,
+              enableMute: false,
+              enableVolumeScroll: false,
+              enableNumbers: false,
+              volumeStep: 0.1,
+              seekStep: 5,
+              enableModifiersForNumbers: false,
+              playPauseKey: function(event, player) {
+                // space or ctrl + 0
+                return (
+                  event.which === 32 || (event.ctrlKey && event.which === 48)
+                );
+              },
+              fullscreenKey: function(event, player) {
+                // override fullscreen to trigger when pressing the F key or Ctrl+Enter
+                return (
+                  event.which === 70 || (event.ctrlKey && event.which === 187)
+                );
+              },
+            });
+          });
+        });
+      });
+    </script>
+  </body>
 </html>
