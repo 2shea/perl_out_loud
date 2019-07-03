@@ -1,11 +1,11 @@
 @font-face {
     font-family: 'Yanone Kaffeesatz';
-    src: url(fonts/YanoneKaffeesatz-Regular.otf);
+    src: url(/fonts/YanoneKaffeesatz-Regular.otf);
 }
 
 @font-face {
     font-family: 'Fura Code';
-    src: url(fonts/FuraCodeRegular.otf);
+    src: url(/fonts/FuraCodeRegular.otf);
 }
 
 body {

@@ -7,7 +7,7 @@ I was expecting writing perl by voice to go something like this...
 
 ---
 class: center, middle, black
-<video width="100%" controls>
+<video id='vista_perl' class='video-js' controls preload='auto' width='800' data-setup='{}'>
   <source src="videos/vista_perl_cut.mp4" type="video/mp4">
 </video>
 
@@ -19,7 +19,7 @@ But it actually works like...
 
 ---
 class: center, middle, black
-<video width="100%" controls>
+<video id='can_do_better' class='video-js' controls preload='auto' width='800' data-setup='{}'>
   <source src="videos/I_can_do_better.mp4" type="video/mp4">
 </video>
 
