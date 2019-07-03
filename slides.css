@@ -194,3 +194,10 @@ textarea::selection {
     background-color: white;
     color: #ed1842;
 }
+
+textarea::placeholder {
+    font-size: 200px;
+    text-align: center;
+    color: #ed1842;
+    font-weight: bold;
+}

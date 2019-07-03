@@ -34,9 +34,9 @@ guess what happens after talking to your computer for 8 hours a day?…
 
 ---
 class: pain
-## Open Office
+## Open Offices
 
-everyone's favorite complaint
+Adding a microphone is a challenge... but there are solutions!
 
 ???
 * two way noise problem

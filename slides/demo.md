@@ -1,5 +1,5 @@
 class: mastery, center, middle
-<textarea rows="8" placeholder="How about a live demo?"></textarea>
+<textarea rows="8" placeholder="LIVE DEMO"></textarea>
 
 ???
 Basic Keys

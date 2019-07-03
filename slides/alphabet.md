@@ -1,11 +1,11 @@
 class: center, middle, painvert
-The ABC's
+But... How??
+---
+class: center, middle
+## Let's start with the basics...
 
 ---
 class: center, middle, discovery
-<img src="images/alphabet_sounds.png" height="600" alt="alphabet sounds">
----
-class: discovery
 .acc[A]ir
 .acc[B]at
 .acc[C]ap
@@ -33,7 +33,9 @@ ple.acc[x]
 .acc[Y]ank
 .acc[Z]ip
 
-<textarea rows="4"></textarea>
 ???
 Each letter of the alphabet is a word. The alphabet words are carefully chosen to have few syllables (for speed), and carefully chosen phonemes* (for accuracy).
+---
+class: center, middle, discovery
+<img src="images/alphabet_sounds.png" height="600" alt="alphabet sounds">
 ---
