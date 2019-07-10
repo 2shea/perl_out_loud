@@ -24,14 +24,18 @@ class: center, middle, black
 </video>
 
 ---
+class: center, middle, painvert
+But... How??
+---
 class: discovery
 ## The Tech
 
 Microphone 🎤
 
-Talon <img src="images/talon_logo.png" height="50px" alt="alphabet sounds">
+Dragon Dictation <img src="images/dragon_logo.gif" height="50px" 
+alt="alphabet sounds">
 
-Dragon Dictation <img src="images/dragon_logo.gif" height="50px" alt="alphabet sounds">
+Talon <img src="images/talon_logo.png" height="50px" alt="alphabet sounds">
 
 ???
 - for mac

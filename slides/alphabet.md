@@ -1,8 +1,20 @@
-class: center, middle, painvert
-But... How??
+class: center, middle, discovery
+## The ABC's (or ASDF's)
 ---
-class: center, middle
-## Let's start with the basics...
+class: center, middle, discovery
+<img src="images/alphabet_sounds.png" height="600" alt="alphabet sounds">
+---
+class: middle, discovery
+### NATO Phonetic Alphabet
+<table>
+  <tr><td> Alpha </td><td> Hotel </td><td> November </td><td> Uniform </td></tr>
+  <tr><td> Bravo </td><td> India </td><td> Oscar </td><td> Victor </td></tr>
+  <tr><td> Charlie </td><td> Juliett </td><td> Papa </td><td> Whiskey </td></tr>
+  <tr><td> Delta </td><td> Kilo </td><td> Québec </td><td> X-ray </td></tr>
+  <tr><td> Echo </td><td> Lima </td><td> Romeo </td><td> Yankee </td></tr>
+  <tr><td> Foxtrot </td><td> Mike </td><td> Sierra </td><td> Zulu </td></tr>
+  <tr><td> Golf </td><td></td><td> Tango </td></tr>
+</table>
 
 ---
 class: center, middle, discovery
@@ -35,7 +47,4 @@ ple.acc[x]
 
 ???
 Each letter of the alphabet is a word. The alphabet words are carefully chosen to have few syllables (for speed), and carefully chosen phonemes* (for accuracy).
----
-class: center, middle, discovery
-<img src="images/alphabet_sounds.png" height="600" alt="alphabet sounds">
 ---
