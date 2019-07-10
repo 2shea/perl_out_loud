@@ -3,7 +3,7 @@ class: mastery, center, middle
 
 ---
 class: center, middle, black
-<video id='mojolicious' class='video-js' controls preload='auto' width='800' data-setup='{}'>
+<video id='mojolicious' class='video-js' controls preload='auto' width='700' data-setup='{}'>
 
   <source src="videos/emoji_search_demo.mp4" type="video/mp4">
 </video>
