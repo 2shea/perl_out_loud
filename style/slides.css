@@ -167,6 +167,11 @@ td::first-letter {
     bottom: 25px;
 }
 
+.attribution_vista {
+    font-size: 28px;
+    color: black;
+}
+
 input[type=textarea],
 textarea {
     font-family: monospace;

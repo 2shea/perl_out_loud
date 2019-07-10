@@ -11,7 +11,7 @@ class: center, middle, black
   <source src="videos/vista_perl_cut.mp4" type="video/mp4">
 </video>
 
-.attribution[Source: https://youtu.be/MzJ0CytAsec]
+.attribution_vista[[Windows Vista Speech Recognition Tested - Perl Scripting, by scrubadub1](https://youtu.be/MzJ0CytAsec)]
 
 ---
 class: center, middle, discovery
