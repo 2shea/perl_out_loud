@@ -13,6 +13,11 @@ class: center, middle, black
 
 .attribution_vista[[Windows Vista Speech Recognition Tested - Perl Scripting, by scrubadub1](https://youtu.be/MzJ0CytAsec)]
 
+???
+Windows Vista Speech Recognition Tested Perl Scripting
+scrubadub1
+original video is 10 mins, i have cut it
+
 ---
 class: center, middle, discovery
 But it actually works like...
@@ -22,6 +27,10 @@ class: center, middle, black
 <video id='can_do_better' class='video-js' controls preload='auto' width='700' data-setup='{}'>
   <source src="videos/I_can_do_better.mp4" type="video/mp4">
 </video>
+
+???
+same code
+intentionally left errors
 
 ---
 class: center, middle, painvert
