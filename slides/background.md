@@ -1,5 +1,5 @@
 class: pain, center, middle
-I write Perl… by voice
+I write (mostly) Perl… by voice
 
 ---
 class: center, middle, painvert
@@ -23,18 +23,20 @@ Both hands
 class: pain
 ## First I tried…
 * Taking breaks
+* Yoga/Stretching
 * Wrist braces at night
-* Anti-inflammatories
-* Occupational/Physical Therapy
 * Massage
+* Acupuncture
+* Chiropractor
 
 ---
 class: pain
 ## Then I tried…
-* Acupuncture
-* Chiropractor
 * Pain creams
-* Yoga/Stretching
+* Anti-inflammatories
+* Occupational Therapy
+* Physical Therapy
+* Trigger point injections
 * And More...
 
 ---
@@ -64,5 +66,5 @@ class: pain, center, middle
 
 While taking four aleve a day, using a very specialized keyboard, adding a left-hand mouse, maintaining a stretching schedule, i could type ~3 hours a day with no more than ~30-45 straight minutes of typing, but broken up with long breaks in between.
 
-* Started looking at voice dictation
+* Started looking at voice solutions
 ---
