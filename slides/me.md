@@ -1,5 +1,6 @@
 class: pain
 ## whois emily
+- Software Engineer
 - GitHub: @2shea
 - Twitter: @yomilly
 - I write code for Fastly

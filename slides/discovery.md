@@ -41,7 +41,7 @@ class: discovery
 
 Microphone 🎤
 
-Dragon Dictation <img src="images/dragon_logo.gif" height="50px" 
+Dragon Dictation (for now) <img src="images/dragon_logo.gif" height="50px" 
 alt="alphabet sounds">
 
 Talon <img src="images/talon_logo.png" height="50px" alt="alphabet sounds">
@@ -53,7 +53,7 @@ Talon <img src="images/talon_logo.png" height="50px" alt="alphabet sounds">
 class: discovery
 ## What Is Talon?
 * Hands-free input
-* Uses Dragon Dictation API
+* Works with a voice engine (Dragon for now)
 * Programmatically configured with Python
 * Free!
 * https://www.patreon.com/lunixbochs

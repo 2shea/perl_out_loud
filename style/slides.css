@@ -105,6 +105,15 @@ a:active {
 
 .black {
     background-color: black;
+    color: white;
+}
+
+.blackvert {
+    background-color: black;
+    color: white;
+    font-size: 210px;
+    font-weight: bold;
+    padding: 0;
 }
 
 .black .attribution {

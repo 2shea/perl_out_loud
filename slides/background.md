@@ -1,5 +1,5 @@
 class: pain, center, middle
-I write (mostly) Perl… by voice
+I write code (mostly Perl)… by voice
 
 ---
 class: center, middle, painvert
@@ -22,9 +22,9 @@ Both hands
 ---
 class: pain
 ## First I tried…
-* Taking breaks
+* Typing breaks
 * Yoga/Stretching
-* Wrist braces at night
+* Wrist braces
 * Massage
 * Acupuncture
 * Chiropractor
@@ -34,6 +34,7 @@ class: pain
 ## Then I tried…
 * Pain creams
 * Anti-inflammatories
+* Muscle Relaxers
 * Occupational Therapy
 * Physical Therapy
 * Trigger point injections

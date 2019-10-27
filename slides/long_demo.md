@@ -9,3 +9,7 @@ class: center, middle, black
 </video>
 
 ---
+class: center, middle
+<img height="100%" width="100%" src="images/whale_quench_oblong.png" alt="whale quench" title="" />
+
+---

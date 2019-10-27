@@ -14,7 +14,7 @@ class: pain
 ## Take Aways
 * Take care of your body!
 * People are using speech to code in real life
-* Remember non-keyboard users when building things :)
+* Consider _all_ users when building/designing
 * The future may be more diverse than the keyboard/mouse model
 
 ???
@@ -27,14 +27,13 @@ class: pain
 ---
 class: painvert, center, middle
 Thanks!
----
-class: center, middle, pain
-## BTW, Fastly is Hiring!
----
-class: pain
-## Links
-* Talon: https://talonvoice.com/
-* My Talon: https://github.com/2shea/talon_configs
-* Talon Community: https://github.com/dwiel/talon_community
-* Talon Patreon: https://www.patreon.com/lunixbochs
 
+---
+class: blackvert, center, middle
+Questions?
+
+---
+class: pain, center, middle
+<img height="100%" width="100%" src="images/whale_quench_cute.png" alt="whale quench" title="" />
+https://whalequench.club
+https://talonvoice.com/
