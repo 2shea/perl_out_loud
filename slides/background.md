@@ -1,5 +1,5 @@
 class: pain, center, middle
-I write code (mostly Perl)… by voice
+I write code… by voice
 
 ---
 class: center, middle, painvert

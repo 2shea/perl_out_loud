@@ -29,6 +29,10 @@ class: painvert, center, middle
 Thanks!
 
 ---
+class: pain, center, middle
+I ❤️ feedback! Please remember to rate this session 😊
+
+---
 class: blackvert, center, middle
 Questions?
 
