@@ -1,7 +1,7 @@
 # Voice Driven Development
 
 ## Setup
-Install `git-lfs` for the large files (videos and images) that are part of this repo:
+Install `git-lfs` for the large files (videos and images). This is required to clone this repo:
 ```
 brew install git-lfs
 ```
