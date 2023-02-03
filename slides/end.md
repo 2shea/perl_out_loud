@@ -30,14 +30,6 @@ Thanks!
 
 ---
 class: pain, center, middle
-I ❤️ feedback! Please remember to rate this session 😊
-
----
-class: blackvert, center, middle
-Questions?
-
----
-class: pain, center, middle
 <img height="100%" width="100%" src="images/whale_quench_cute.png" alt="whale quench" title="" />
 https://whalequench.club
 https://talonvoice.com/
